@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Web</title>
+</head>
+
+<body>
+    <div class="container-search" id='modelMe'>
+        <div id="btnClose">
+            <i class="fa fa-times close"></i>
+        </div>
+        <div id="hasilSearch" class='hasil-search'>
+            <movie-search-list id="movies-list"></movie-search-list>
+        </div>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MoviesWeb</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Movies">Movies</a>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <input id="serachInput" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                <button id="btnSearch" class="btn btn-success my-2 my-sm-0">Search</button>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="mb-3">Coming Movies</h3>
+                </div>
+                <div class="col-6 text-right">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button"
+                        data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div id="carousel1" class="row">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div id="carousel2" class="row">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div id="carousel3" class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Movies">
+        <div class="movies-heading">
+            <h2>Movies</h2>
+        </div>
+        <movie-list id="movies-list"></movie-list>
+    </section>
+    <footer-custom></footer-custom>
+</body>
+
+</html>
